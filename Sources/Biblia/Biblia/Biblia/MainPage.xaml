@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblia.MainPage">
+
+    <StackLayout BackgroundColor="#826438">
+        <Label Text="Versículo:"  TextColor="White" FontAttributes="Bold"  FontSize="35" HorizontalOptions="Center"/>
+        <Frame BackgroundColor="#B48C50" CornerRadius="10" Margin="20,20,20,0" >
+            <Label Text="texto"
+                   TextColor="White" x:Name="texto" FontAttributes="Bold" FontSize="20"/>
+        </Frame>
+        <Label Text="NOME" x:Name="Nome" FontSize="30" Margin="0,30,20,0" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+
+        <Label Margin="0,20,0,0" TextColor="White" HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Capítulo: " FontAttributes="Bold" FontSize="30"/>
+                        <Span Text="00" x:Name="Capitulo" FontSize="30" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Margin="0,20,0,0" TextColor="White" HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Versículo: " FontAttributes="Bold" FontSize="30"/>
+                        <Span Text="00" x:Name="Versiculo" FontSize="30" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Button Text="Novo Versículo" BackgroundColor="#B48C50" TextColor="white" FontAttributes="Bold" FontSize="20" Margin="100,120,100,0"
+                CornerRadius="10" Clicked="NovoV"/>
+        <Label Margin="20,0,0,0" TextColor="White" Text="Para mais versículos acesse " FontAttributes="Bold" FontSize="20"/>
+        <Label Margin="280,-30,0,0" Text="Biblia Online" TextColor="Blue" x:Name="Link" FontSize="17" FontAttributes="Bold">
+            <Label.GestureRecognizers>
+                   <TapGestureRecognizer Tapped="OpenWebsite" />
+               </Label.GestureRecognizers> 
+        </Label>
+
+    </StackLayout>
+
+</ContentPage>
